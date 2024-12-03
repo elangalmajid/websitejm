@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(AdminSeeder::class);
         // User::factory(10)->create();
 
         // User::factory()->create([
@@ -21,10 +22,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+
         // Create a few Inspeksi records
-        Inspeksi::factory()->count(10)->create();
+        // Inspeksi::factory()->count(10)->create();
 
         // Create DataHasilDeteksi records referencing the Inspeksi records
-        DataHasilDeteksi::factory()->count(50)->create();
+        // DataHasilDeteksi::factory()->count(50)->create();
     }
 }
