@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
 
 use function Laravel\Prompts\password;
 
@@ -24,7 +25,8 @@ class AdminSeeder extends Seeder
                 'fullname' => 'admin',
                 'email' => 'admin@gmail.com',
                 'division' => 'ITE',
-                'status' => 'active'
+                'status' => 'active',
+                'created_at' => Carbon::now()
             ]
         );
     }
